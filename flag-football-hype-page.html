@@ -105,6 +105,13 @@
   .tbox span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#bfe3b8}
   .tbox--sec span{color:#ffd2d2}
   @media(max-width:520px){.tbox{min-width:60px}.timer{width:100%;justify-content:space-between}.tbox{flex:1}}
+  .countdown-locref{margin-top:12px;background:var(--turf-dark);color:#fff;border-radius:16px;padding:16px 18px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:center;box-shadow:var(--shadow);border:2px solid var(--gold);text-align:center}
+  .countdown-locref-item{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+  .countdown-locref-item .locref-icon{font-size:24px;line-height:1}
+  .countdown-locref-item .locref-label{font-family:"Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;font-weight:800;font-size:14px;color:var(--gold)}
+  .countdown-locref-item .locref-value{font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(20px,4.5vw,26px);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+  .countdown-locref-divider{width:2px;height:28px;background:rgba(255,255,255,.28);border-radius:999px}
+  @media(max-width:560px){.countdown-locref-divider{display:none}.countdown-locref{flex-direction:column;gap:10px}}
 
   /* FORMAT */
   .format{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
@@ -443,6 +450,21 @@
     </div>
     <p id="cd-note" style="margin:0;width:100%;font-weight:700;color:var(--muted);font-size:14px;display:none"></p>
   </section>
+
+  <!-- LOCATION + REF — DIRECTLY UNDER COUNTDOWN -->
+  <div class="countdown-locref" aria-label="Game location and referee">
+    <div class="countdown-locref-item">
+      <span class="locref-icon" aria-hidden="true">📍</span>
+      <span class="locref-label">Location:</span>
+      <span class="locref-value">Holiday Rec Fields</span>
+    </div>
+    <div class="countdown-locref-divider" aria-hidden="true"></div>
+    <div class="countdown-locref-item">
+      <span class="locref-icon" aria-hidden="true">🦓</span>
+      <span class="locref-label">Ref:</span>
+      <span class="locref-value">Brian Taylor (Maybe)</span>
+    </div>
+  </div>
 
   <!-- FORMAT -->
   <section class="format" aria-label="How the game works">
